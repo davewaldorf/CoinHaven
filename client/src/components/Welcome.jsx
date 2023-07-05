@@ -1,9 +1,15 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import CreditCard from "./CreditCard";
-
+import { TransactionContext } from "../context/TransactionContext";
 
 const Welcome = () => {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { connectWallet, currentAccount } = useContext(TransactionContext);
+
+  handleSubmit((data) => {
+    console.log(data);
+  });
 
   return (
     <div className="hero min-h-screen p-20">
@@ -11,18 +17,26 @@ const Welcome = () => {
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
           <CreditCard/>
           <div className="card-body gap-4">
-          <input className="input input-ghost input-primary w-full max-w-xs" placeholder="Address To" {...register("addressTo", { required: true })} />
-          <input className="input input-ghost input-primary w-full max-w-xs" placeholder="Amount" {...register("amount", { required: true })} />
-          <input className="input input-ghost input-primary" placeholder="Keyword" {...register("keyword", { required: true })} />
-          <input className="input input-ghost input-primary" placeholder="Message" {...register("message", { required: true })} />
-          <button className="btn btn-wide btn-ghost w-full">Send Now</button> 
+          <input className="input input-ghost input-primary w-full max-w-xs" placeholder="Address To" 
+          {...register("addressTo", { required: true })} />
+          <input className="input input-ghost input-primary w-full max-w-xs" placeholder="Amount" 
+          {...register("amount", { required: true })} />
+          <input className="input input-ghost input-primary" placeholder="Keyword" 
+          {...register("keyword", { required: true })} />
+          <input className="input input-ghost input-primary" placeholder="Message" 
+          {...register("message", { required: true })} />
+          <button className="btn btn-wide btn-ghost w-full" 
+          >
+            Send Now</button> 
           </div>
         </div>
         <div className="text-center lg:text-left p-20">
-          <h1 className="text-5xl font-bold">Discover CoinHaven:</h1>
+          <h1 className="text-5xl font-bold">Discover CoinHaven</h1>
           <p className="py-6">Send crypto globally, explore the crypto world, and buy/sell effortlessly.
           </p>
-          <button className="btn btn-wide btn-primary font-bold w-full">Connect Wallet</button>
+          {!currentAccount && <button className="btn btn-wide btn-primary font-bold w-full"
+          onClick={connectWallet}>
+            Connect Wallet</button>}
           <div className="flex justify-evenly mt-10">
             <div className="badge badge-outline">Reliability</div>
             <div className="badge badge-outline">Security</div>

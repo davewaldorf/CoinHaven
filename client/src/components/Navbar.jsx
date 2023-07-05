@@ -1,11 +1,11 @@
+import { useContext } from 'react';
+import { TransactionContext } from '../context/TransactionContext';
 import NavBarItem from './NavbarItem';
-
-
-
-
 const navItems = ["Market", "Exchange", "Tutorials", "Wallets"];
 
 const Navbar = () => {
+  const { currentAccount } = useContext(TransactionContext);
+
   return (
     <div className="navbar">
       <div className="navbar-start">
@@ -29,7 +29,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary font-bold mr-5">Login</a>
+        {currentAccount? null : <a className="btn btn-primary font-bold mr-5">Login</a>}
       </div>
     </div>
   );

@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import Card from 'react-animated-3d-card';
-import React from 'react';
+import { TransactionContext } from '../context/TransactionContext';
 
 const CreditCard = () => {
+  const { currentAccount } = useContext(TransactionContext);
+
+  if (!currentAccount) return null;  
+  
   return (
     <Card       
       style={{
@@ -10,7 +15,6 @@ const CreditCard = () => {
         height: '200px',
         cursor: 'pointer'
       }}
-      onClick={() => console.log('Card clicked')}
     > 
          <div>
           <img
@@ -50,12 +54,7 @@ const CreditCard = () => {
               fontFamily: "Fira Code",
               color: "white"
             }}
-            onClick={console.log("prova")}
           >
-            <label>1234</label>
-            <label style={{ marginLeft: "30px" }}>1234</label>
-            <label style={{ marginLeft: "30px" }}>1234</label>
-            <label style={{ marginLeft: "30px" }}>1234</label>
           </div>
         </div>
         <div>
@@ -91,10 +90,10 @@ const CreditCard = () => {
               bottom: "25px",
               left: "25px",
               opacity: 1,
-              fontSize: "25px"
+              fontSize: "15px"
             }}
           >
-            {/* {showFront} */}
+            {currentAccount.slice(0, 6) + "..." + currentAccount.slice(-4)}
           </label>
           <label
             style={{
