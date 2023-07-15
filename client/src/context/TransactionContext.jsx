@@ -34,22 +34,20 @@ export const TransactionProvider = ({ children }) => {
       if (ethereum) {
         const transactionContract = await createEthereumContract();
         const allTransactions = await transactionContract.getAllTransactions();
-        
-        const structuredTransactions = allTransactions.map((transaction) => {
-          const { addressTo, addressFrom, timestamp, message, amount, url, keyword } = transaction;
-          return {
-            addressTo,
-            addressFrom,
-            timestamp: new Date(timestamp * 1000).toLocaleString(),
-            message,
-            amount: ethers.utils.formatEther(amount),
-            url,
-            keyword,
-            id: timestamp
-          }
+        const structuredTransactions = allTransactions.map((transaction) => ({
+          addressTo: transaction.receiver,
+          addressFrom: transaction.from,
+          timestamp: new Date(Number(transaction.timestamp) * 1000).toLocaleString(),
+          message: transaction.message,
+          keyword: transaction.keyword,
+          amount: ethers.formatEther(transaction.amount)
+        }));
+        allTransactions.forEach((transaction) => {
+          transaction.forEach((item, key) => {
+            console.log(item, key);
+          })
         });
         setTransactions(structuredTransactions);
-        console.log(structuredTransactions);
       } else {
         console.log("Ethereum object doesn't exist!");
       }
@@ -124,10 +122,11 @@ export const TransactionProvider = ({ children }) => {
 
         const transactionHash = await transactionContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
         setIsLoading(true);
+        console.log(transactionHash);
         await transactionHash.wait();
         setIsLoading(false);
         const transactionCount = await transactionContract.getTransactionCount();
-        setTransactionCount(transactionCount.toNumber());
+        setTransactionCount(transactionCount);
         window.location.reload();
       }
     } catch (error) {

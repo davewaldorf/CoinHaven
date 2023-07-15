@@ -5,6 +5,7 @@ import { TransactionContext } from '../context/TransactionContext';
 
 const Transactions = () => {
   const {transactions, currentAccount } = useContext(TransactionContext);
+  console.log(transactions);
 
   return (
       <div className="container mx-auto gradient-bg-transactions p-10 ">
@@ -18,8 +19,8 @@ const Transactions = () => {
           </h1>
         )}
         <div className="flex flex-wrap items-center justify-center relative shadow-2xl">
-          {[...mockData,...transactions].reverse().map((transaction) => (
-            <TransactionCard key={transaction.id} {...transaction} />
+          {[...mockData,...transactions].reverse().map((transaction, index) => (
+            <TransactionCard key={index} {...transaction} />
           ))}
         </div>
       </div>
