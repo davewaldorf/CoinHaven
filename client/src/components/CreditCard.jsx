@@ -6,7 +6,7 @@ const CreditCard = () => {
   const { currentAccount } = useContext(TransactionContext);
 
   if (!currentAccount) return null;  
-  
+
   return (
     <Card       
       style={{

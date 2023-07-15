@@ -1,7 +1,9 @@
 const Loader = () => {
   return (
-    <h1>Loader</h1>
-  )
-}
+    <div className="flex items-center justify-center">
+      <span className="loading loading-ring loading-lg"></span>
+    </div>
+  );
+};
 
-export default Loader
+export default Loader;
