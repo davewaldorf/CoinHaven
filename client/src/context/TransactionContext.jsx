@@ -42,11 +42,6 @@ export const TransactionProvider = ({ children }) => {
           keyword: transaction.keyword,
           amount: ethers.formatEther(transaction.amount)
         }));
-        allTransactions.forEach((transaction) => {
-          transaction.forEach((item, key) => {
-            console.log(item, key);
-          })
-        });
         setTransactions(structuredTransactions);
       } else {
         console.log("Ethereum object doesn't exist!");

@@ -1,14 +1,13 @@
 import TransactionCard from './TransactionCard';
 import { useContext } from 'react';
-import  mockData  from '../utils/mockData';
+import  mockData  from '../utils/dummyData';
 import { TransactionContext } from '../context/TransactionContext';
 
 const Transactions = () => {
   const {transactions, currentAccount } = useContext(TransactionContext);
-  console.log(transactions);
 
   return (
-      <div className="container mx-auto gradient-bg-transactions p-10 ">
+      <div className="flex items-center flex-col gradient-bg-transactions p-10 " id="Transactions">
         {currentAccount ? (
           <h1 className="text-white font-bold text-3xl sm:text-5xl py-2 text-gradient">
           TRANSACTIONS

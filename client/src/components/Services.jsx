@@ -6,7 +6,7 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 
 const Services = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center gradient-bg-services">
+    <div className="flex flex-col w-full justify-center items-center gradient-bg-services" id="Services">
       <div className="text-center items-center justify-center">
         <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient">
           Services That We

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import CreditCard from "./CreditCard";
 import { TransactionContext } from "../context/TransactionContext";
 import  Loader  from "./Loader";
+import 'animate.css';
 
 const Welcome = () => {
   const { register, handleSubmit, watch, reset} = useForm();
@@ -26,10 +27,10 @@ const Welcome = () => {
   }
 
   return (
-    <div className="hero min-h-screen p-20">
+    <div className="hero min-h-screen p-20" id="Home">
       <div className="hero-content flex-col lg:flex-row-reverse">
         {currentAccount &&
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl items-center">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl items-center animate__animated animate__fadeInRight">
           <CreditCard />
           <div className="card-body">
             <form className="form-control" onSubmit={handleSubmit(onSubmit)}>
@@ -51,7 +52,7 @@ const Welcome = () => {
             </form>
           </div>
         </div>}
-        <div className="text-center lg:text-left p-20">
+        <div className="text-center lg:text-left p-20 animate__animated animate__fadeInLeft">
           <h1 className="text-5xl font-bold">Discover CoinHaven</h1>
           <p className="py-6">Send crypto globally, explore the crypto world, and buy/sell effortlessly.
           </p>
@@ -59,14 +60,14 @@ const Welcome = () => {
             onClick={connectWallet}>
             Connect Wallet</button>}
           <div className="flex justify-evenly mt-10">
-            <div className="badge badge-outline">Reliability</div>
-            <div className="badge badge-outline">Security</div>
-            <div className="badge badge-outline">Ethereum</div>
+            <div className="badge badge-m badge-outline badge-secondary p-4">Reliability</div>
+            <div className="badge badge-m badge-outline badge-secondary p-4">Security</div>
+            <div className="badge badge-m badge-outline badge-secondary p-4">Ethereum</div>
           </div>
           <div className="flex justify-evenly mt-5">
-            <div className="badge badge-outline">Web 3.0</div>
-            <div className="badge badge-outline">Low Fees</div>
-            <div className="badge badge-outline">Blockchain</div>
+            <div className="badge badge-m badge-outline badge-secondary p-4">Web 3.0</div>
+            <div className="badge badge-m badge-outline badge-secondary p-4">Low Fees</div>
+            <div className="badge badge-m badge-outline badge-secondary p-4">Blockchain</div>
           </div>
         </div>
       </div>

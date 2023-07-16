@@ -15,11 +15,13 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "animate.css": "^4.1.1",
     "ethers": "^6.6.2",
     "react": "^18.2.0",
     "react-animated-3d-card": "^1.0.2",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.45.1"
+    "react-hook-form": "^7.45.1",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
