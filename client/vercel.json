@@ -1,0 +1,8 @@
+{
+  "build": {
+    "npm": {
+      "ignoreScripts": true,
+      "arguments": "--force"
+    }
+  }
+}
