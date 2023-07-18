@@ -17,7 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "animate.css": "^4.1.1",
     "ethers": "^6.6.2",
-    "react": "^18.2.0",
+    "react": "^18.0.0",
     "react-animated-3d-card": "^1.0.2",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.1",
