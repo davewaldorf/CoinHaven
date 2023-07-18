@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 
 import { contractABI, contractAddress } from "../utils/constants";
+import { set } from "react-hook-form";
 
 export const TransactionContext = createContext();
 
@@ -117,7 +118,6 @@ export const TransactionProvider = ({ children }) => {
 
         const transactionHash = await transactionContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
         setIsLoading(true);
-        console.log(transactionHash);
         await transactionHash.wait();
         setIsLoading(false);
         const transactionCount = await transactionContract.getTransactionCount();

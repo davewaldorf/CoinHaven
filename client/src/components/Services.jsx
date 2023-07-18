@@ -6,36 +6,33 @@ import { faEthereum } from "@fortawesome/free-brands-svg-icons";
 
 const Services = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center gradient-bg-services" id="Services">
-      <div className="text-center items-center justify-center">
-        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient">
-          Services That We
+    <div className="flex flex-col w-full justify-center items-center gradient-bg-services p-20" id="Services">
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="text-center font-bold text-white text-3xl sm:text-5xl py-2 text-gradient uppercase">
+          Services that we
           <br />
-          Continue To Improve
+          continue to improve
         </h1>
-        <p className="my-2 text-white font-light md:w-9/12 w-11/12 text-base">
+        <p className="text-center text-white font-light md:w-9/12 w-11/12 py-2 text-base">
           The best choice for buying and selling your crypto assets, with the
-          various super friendly services we offer
+          various super friendly services we offer.
         </p>
       </div>
-      <div className="flex md:flex-row flex-col items-center justify-between md:p-20 gap-5">
+      <div className="flex md:flex-row flex-col md:p-10 gap-10 items-center justify-center">
         <ServiceCard
-          color="bg-primary"
-          title="Security gurantee"
+          title="Security Gurantee"
           icon={<FontAwesomeIcon icon={faShield} size='2xl' beatFade style={{color: "#E25AB3",}} />}
-          subtitle="Security is Guranteed. We always maintain privacy and maintain the quality of our products"
+          subtitle="Security is guaranteed. We always prioritize privacy and maintain the quality of our products."
         />
         <ServiceCard
-          color="bg-secondary"
-          title="Best exchange rates"
+          title="Competitive Exchange Rates"
           icon={<FontAwesomeIcon icon={faEthereum} beatFade size="2xl" style={{color: "#359ff1",}} />}
-          subtitle="Security is guranteed. We always maintain privacy and maintain the quality of our products"
+          subtitle="Enjoy the best exchange rates in the market. We ensure security and maintain the quality of our products."
         />
         <ServiceCard
-          color="bg-accent"
-          title="Fastest transactions"
+          title="Fast Transactions"
           icon={<FontAwesomeIcon icon={faMoneyBillTransfer} beatFade size="2xl" style={{color: "#f1c310",}} />}
-          subtitle="Security is guranteed. We always maintain privacy and maintain the quality of our products"
+          subtitle="Experience lightning-fast transactions. We prioritize security and maintain the quality of our products."
         />
       </div>
     </div>

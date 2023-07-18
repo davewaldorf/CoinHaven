@@ -1,16 +1,16 @@
-const footerItems = ["Market", "Exchange", "Tutorials", "Wallets"];
+const footerItems = ["Wallet", "Services", "Transactions"];
 
 const Footer = () => {
   return (
-<footer className="footer footer-center p-10 bg-base-200 text-base-content rounded gradient-bg-footer">
+<footer className="footer footer-center p-10 text-base-content rounded gradient-bg-footer">
   <div className="grid grid-flow-col gap-4">
     {footerItems.map((item, index) => (
-       <a key={item + index} className="link link-hover">{item}</a>
+       <a key={item + index} className="link link-hover" href={`#${item}`}>{item}</a>
     ))}
   </div> 
   <div>
     <div className="grid grid-flow-col gap-4">
-    <a className="btn btn-ghost normal-case text-xl" href="#home">CoinHaven</a>
+    <h1 className="font-bold normal-case text-xl">CoinHaven</h1>
     </div>
   </div> 
   <div>

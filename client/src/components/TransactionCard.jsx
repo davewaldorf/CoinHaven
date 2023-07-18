@@ -3,11 +3,10 @@ import useFetch from "../hooks/useFetch";
 
 const TransactionCard = ({ addressTo, addressFrom, timestamp, message, amount, url, keyword }) => {
   const gif = useFetch({ keyword });
-  console.log(gif);
 
   return (
     <div className="card card-bordered glass w-72 m-10 p-0">
-      <figure><img src={gif || url} alt="Shoes" /></figure>
+      <figure><img src={gif || url} alt="gif" /></figure>
       <div className="card-body">
         <h2 className="card-title text-sm	">address from: {shortenAddress(addressFrom)}</h2>
         <h2 className="card-title text-sm	">address to: {shortenAddress(addressTo)} </h2>

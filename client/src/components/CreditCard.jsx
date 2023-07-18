@@ -35,7 +35,7 @@ const CreditCard = () => {
               top: "15px",
               height: "70px"
             }}
-            src="../../images/Ethereum-Portrait-Purple-Dark-Logo.wine.svg"
+            src="../../images/EthereumLogo.svg"
             className="card-item__chip"
             alt="credit card chip"
           ></img>
@@ -69,19 +69,7 @@ const CreditCard = () => {
           >
             Card holder
           </label>
-          <label
-            style={{
-              color: "white",
-              position: "absolute",
-              bottom: "60px",
-              right: "25px",
-              opacity: 0.5
-            }}
-          >
-            Expires
-          </label>
         </div>
-
         <div>
           <label
             style={{
@@ -94,18 +82,6 @@ const CreditCard = () => {
             }}
           >
             {currentAccount.slice(0, 6) + "..." + currentAccount.slice(-4)}
-          </label>
-          <label
-            style={{
-              color: "white",
-              position: "absolute",
-              bottom: "25px",
-              right: "25px",
-              opacity: 1,
-              fontSize: "15px"
-            }}
-          >
-            10/22
           </label>
         </div>
 </Card>

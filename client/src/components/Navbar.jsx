@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 import { TransactionContext } from '../context/TransactionContext';
 import NavBarItem from './NavbarItem';
-const navItems = ["Home", "Services", "Transactions"];
+
+const navItems = ["Services", "Transactions"];
 
 const Navbar = () => {
   const { currentAccount } = useContext(TransactionContext);
@@ -19,17 +20,17 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl ml-5">CoinHaven</a>
+        <h1 className="font-bold normal-case text-xl ml-5">CoinHaven</h1>
       </div>
       <div className="navbar-center hidden lg:flex">
+     
+      </div>
+      <div className="navbar-end">
       <ul className="menu menu-horizontal px-1">
           {navItems.map((item, index) => (
             <NavBarItem key={item + index} title={item} />
           ))}
         </ul>
-      </div>
-      <div className="navbar-end">
-     
       </div>
     </div>
   );
