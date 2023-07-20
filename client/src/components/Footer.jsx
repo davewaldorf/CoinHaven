@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-flow-col gap-4">
           <div className='text-primary font-bold text-2xl lg:text-3xl ml-5'>
             <span className='text-secondary'>Coin</span>
-            Haven
+            Heaven
           </div>
         </div>
       </div>

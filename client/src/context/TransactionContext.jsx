@@ -2,7 +2,8 @@ import { createContext, useEffect, useState } from "react";
 import { ethers } from "ethers";
 
 import { contractABI, contractAddress } from "../utils/constants";
-import { set } from "react-hook-form";
+
+import PropTypes from 'prop-types';
 
 export const TransactionContext = createContext();
 
@@ -151,3 +152,7 @@ export const TransactionProvider = ({ children }) => {
     </TransactionContext.Provider>
   );
 }; 
+
+TransactionProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};

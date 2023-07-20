@@ -1,5 +1,6 @@
 import shortenAddress from "../utils/shortenAddress";
 import useFetch from "../hooks/useFetch";
+import PropTypes from 'prop-types';
 
 const TransactionCard = ({ addressTo, addressFrom, timestamp, message, amount, url, keyword }) => {
   const gif = useFetch({ keyword });
@@ -19,5 +20,16 @@ const TransactionCard = ({ addressTo, addressFrom, timestamp, message, amount, u
     </div>
   )
 }
+
+TransactionCard.propTypes = {
+  addressTo: PropTypes.string.isRequired,
+  addressFrom: PropTypes.string.isRequired,
+  timestamp: PropTypes.string.isRequired,
+  message: PropTypes.string,
+  amount: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  keyword: PropTypes.string,
+};
+
 
 export default TransactionCard

@@ -89,7 +89,7 @@ const CreditCard = () => {
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
+  }, [mouseX, mouseY]);
 
   return (
     <Container>
@@ -101,14 +101,14 @@ const CreditCard = () => {
             <div className="absolute left-5 top-5">
               <img
                 className="h-16"
-                src="https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/chip.png"
+                src="../public/images/chip.png"
                 alt="credit card chip"
               />
             </div>
             <div className="absolute right-3 top-3">
               <img
                 className="h-20"
-                src="../../images/EthereumLogo.svg"
+                src="../public/images/EthereumLogo.svg"
                 alt="Ethereum logo"
               />
             </div>

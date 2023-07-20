@@ -1,5 +1,3 @@
-import { useContext } from 'react';
-import { TransactionContext } from '../context/TransactionContext';
 import NavBarItem from './NavbarItem';
 
 const navItems = ["Services", "Transactions"];
@@ -21,7 +19,7 @@ const Navbar = () => {
         </div>
         <div className='text-primary font-bold text-2xl lg:text-3xl ml-5'>
           <span className='text-secondary'>Coin</span>
-          Haven
+          Heaven
           </div>
         </div>
       <div className="navbar-center hidden lg:flex">
