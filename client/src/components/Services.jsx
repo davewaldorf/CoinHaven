@@ -28,7 +28,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full justify-center items-center gradient-bg-services p-20" id="Services">
+    <div className="flex flex-col flex-wrap w-full justify-center items-center p-20" id="Services">
       <div className="flex flex-col items-center justify-center">
         <h1 className="text-center font-bold text-white text-3xl sm:text-5xl py-2 text-gradient uppercase">
           Services that we

@@ -22,11 +22,8 @@ const Navbar = () => {
           Heaven
           </div>
         </div>
-      <div className="navbar-center hidden lg:flex">
-     
-      </div>
       <div className="navbar-end">
-      <ul className="menu menu-horizontal px-1">
+      <ul className="menu hidden lg:flex menu-horizontal px-1">
           {navItems.map((item, index) => (
             <NavBarItem key={item + index} title={item} />
           ))}

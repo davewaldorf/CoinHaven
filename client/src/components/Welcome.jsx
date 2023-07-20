@@ -28,7 +28,7 @@ const Welcome = () => {
   }
 
   return (
-    <div className="hero min-h-screen p-e0 w-full" id="Wallet">
+    <div className="hero min-h-screen p-0 w-full" id="Wallet">
       <div className="hero-content flex-col lg:flex-row-reverse">
         {/* {currentAccount && */}
           <div className="credit-card-wrapper card flex-shrink-0 w-full max-w-md shadow-2xl items-center animate__animated animate__fadeInRight m-10">

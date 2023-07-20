@@ -67,7 +67,7 @@ const CreditCard = () => {
   const sheenOpacity = useTransform(
     sheenPosition,
     [-250, 50, 250],
-    [0, 0.05, 0]
+    [0, 0.15, 0]
   );
   const sheenGradient = useMotionTemplate`linear-gradient(
   55deg,
