@@ -101,14 +101,14 @@ const CreditCard = () => {
             <div className="absolute left-5 top-5">
               <img
                 className="h-16"
-                src="../public/images/chip.png"
+                src="images/chip.png"
                 alt="credit card chip"
               />
             </div>
             <div className="absolute right-3 top-3">
               <img
                 className="h-20"
-                src="../public/images/EthereumLogo.svg"
+                src="images/EthereumLogo.svg"
                 alt="Ethereum logo"
               />
             </div>
