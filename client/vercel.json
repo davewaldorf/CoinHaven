@@ -1,8 +1,0 @@
-{
-  "build": {
-    "npm": {
-      "ignoreScripts": true,
-      "arguments": "--legacy-peer-deps"
-    }
-  }
-}

@@ -16,6 +16,22 @@ html {
   animation: gradient 20s ease infinite;
 }
 
+.credit-card {
+  width: 400px;
+  height: 250px;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  border: 1px solid rgba(200 200 200 / 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #eee;
+  text-shadow: 0 1px 0 #999; 
+  background-image: linear-gradient(55deg, transparent, rgba(255, 255, 255, 0.375));
+}
+
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

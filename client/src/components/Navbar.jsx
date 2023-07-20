@@ -5,7 +5,6 @@ import NavBarItem from './NavbarItem';
 const navItems = ["Services", "Transactions"];
 
 const Navbar = () => {
-  const { currentAccount } = useContext(TransactionContext);
 
   return (
     <div className="navbar">
@@ -20,8 +19,11 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <h1 className="font-bold normal-case text-xl ml-5">CoinHaven</h1>
-      </div>
+        <div className='text-primary font-bold text-2xl lg:text-3xl ml-5'>
+          <span className='text-secondary'>Coin</span>
+          Haven
+          </div>
+        </div>
       <div className="navbar-center hidden lg:flex">
      
       </div>
