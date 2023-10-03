@@ -1,0 +1,42 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14  # Use the appropriate Node.js version
+    steps:
+      - checkout
+
+      # Install Node.js dependencies for the client
+      - run:
+          name: Install Client Dependencies
+          command: |
+            cd client
+            npm install
+
+      # Install Node.js dependencies for the smart contract
+      - run:
+          name: Install Smart Contract Dependencies
+          command: |
+            cd smart_contract
+            npm install
+
+      # Build and run tests for the client
+      - run:
+          name: Build and Test Client
+          command: |
+            cd client
+            npm run build
+            npm test
+
+      # Run tests for the smart contract
+      - run:
+          name: Test Smart Contract
+          command: |
+            cd smart_contract
+            npm test
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
